@@ -39,13 +39,13 @@ class ViewController: UIViewController {
     print("-------------------------------")
     
     print("ArrayEasy. Task3")
-    var green: [String] = ["leaf", "grass", "flower", "tree"]
+    var green = ["leaf", "grass", "flower", "tree"]
     getValueArray (green: ["leaf", "grass", "flower", "tree"])
     print("-------------------------------")
     
     print("ArrayEasy. Task4")
-    print(getValueArray(array: ["leaf", "grass", "flower", "tree"]))
-    var _: [String] = ["leaf", "grass", "flower", "tree"]
+    let greenArray = ["leaf", "grass", "flower", "tree"]
+    print(getValueArray(array: greenArray))
     print("-------------------------------")
     
     print("ArrayEasy. Task5")
