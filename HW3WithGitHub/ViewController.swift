@@ -57,6 +57,9 @@ class ViewController: UIViewController {
         let newPeople = removeHumanFrom(people: people, removeName: "Max")
         print("-------------------------------")
         
+        
+        let name = separetedName(name: "AnnTsarikovskaya")
+        print(name)
     }
     //    String Easy:
     //    Задание1. Создать строку со своим именем. Написать метод который получает это имя и возвращает кол-во символов в строке с вашим именем. Возвращенное значение показать в консоль
@@ -97,14 +100,13 @@ class ViewController: UIViewController {
     
     //    Задание3Создать массив с любыми значениями типа строка(во viewDidLoad()). Создать метод который будет принимать как аргумент массив. Метод должен выводить в консоль элементы массива (по одному в одной строке)
     func getValueArray(green: [String])  {
-        let greenArray = green
         for value in green {
             print("\(value)")
         }
     }
     
     //    Задание4 Создать массив с любыми значениями типа строка. Создать метод который будет принимать как аргумент массив. Метод должен возвращать массив который состоит из первого и последнего элемента массива, который был параметро
-    func getValueArray(array: [String]) -> Array<String> {
+    func getValueArray(array: [String]) -> [String] {
         
         let firstElement = array.first!
         let lastItem = array.last!
@@ -130,6 +132,23 @@ class ViewController: UIViewController {
         var totalPeople = people
         totalPeople.removeValue(forKey: removeName)
         print(totalPeople)
+    }
+    //    String Hard:
+    //    Создать метод который будет принимать строку где слитно написано Ваши ИмяФамилия “TungFam" и возвращать строку,  где они будут разделены пробелом. То есть алгоритм разбивает два слова которые начинаются на большую букву
+    func separetedName(name: String) -> String {
+        var separate = ""
+        var isFirstUpperCharAppeared = false
+        for char in name {
+            
+            if String(char).uppercased() == String(char) {
+                if isFirstUpperCharAppeared {
+                    separate.append(" ")
+                }
+                isFirstUpperCharAppeared = true
+            }        
+            separate.append(char)
+        }
+        return separate
     }
 }
 
