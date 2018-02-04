@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-   
         
         //   StringEasy 1
         print("String Easy. Task1")
@@ -57,9 +56,11 @@ class ViewController: UIViewController {
         let newPeople = removeHumanFrom(people: people, removeName: "Max")
         print("-------------------------------")
         
-        
+        print("StringHard. Task1")
         let name = separetedName(name: "AnnTsarikovskaya")
         print(name)
+      
+        
     }
     //    String Easy:
     //    Задание1. Создать строку со своим именем. Написать метод который получает это имя и возвращает кол-во символов в строке с вашим именем. Возвращенное значение показать в консоль
@@ -145,10 +146,11 @@ class ViewController: UIViewController {
                     separate.append(" ")
                 }
                 isFirstUpperCharAppeared = true
-            }        
+            }
             separate.append(char)
         }
         return separate
     }
+ 
 }
 
